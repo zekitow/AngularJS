@@ -1,0 +1,43 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Todo List</title>
+    <link href="../bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="todo.js"></script>
+    <link rel="stylesheet" href="todo.css">
+  </head>
+  <body>
+
+    <div class="page-header">
+      <h1>Todo List <small>with <a href="http://www.angularjs.org/" target="_blank">AngularJS</a></small></h1>
+    </div>
+
+    <div ng-controller="TodoCtrl">
+
+      <div class="col-lg-2">
+        <span>{{remaining()}} of {{todos.length}} remaining</span>
+        [ <a href="" ng-click="archive()">archive</a> ]
+
+        <div ng-repeat="todo in todos">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" ng-model="todo.done">
+              <span class="done-{{todo.done}}">{{todo.text}}</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="row">
+          <input type="text" ng-model="todoText" size="30" placeholder="Some Todo" class="form-control input-1g"/>
+        </div>
+
+        <div class="row">
+          <input class="btn btn-primary btn-block" value="Click and add now!" ng-click="addTodo();"/>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
