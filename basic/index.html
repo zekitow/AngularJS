@@ -1,0 +1,23 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Basic Binding</title>
+    <link href="bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  </head>
+  <body>
+
+    <div class="page-header">
+      <h1>Basic Binding <small>with <a href="http://www.angularjs.org/" target="_blank">AngularJS</a></small></h1>
+    </div>
+
+    <div class="alert alert-info">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      Type your name at the field bellow:<br/>
+      <input type="text" class="form-control" placeholder="name" ng-model="name"/><br/>
+      Helloo <strong>{{name}}</strong>.
+    </div>
+
+  </body>
+</html>
